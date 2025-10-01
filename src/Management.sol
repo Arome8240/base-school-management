@@ -41,7 +41,7 @@ contract Management {
         owner = _owner;
     }
 
-    function addStudent(
+    function registerStudent(
         address _id,
         string memory _name,
         uint8 _age,
@@ -53,7 +53,7 @@ contract Management {
         students[_id] = Student(_name, _age, _level, true);
     }
 
-    function promote(address _id) external onlyOwner {
+    function promoteStudent(address _id) external onlyOwner {
         if (!students[_id].registered) {
             revert StudentNotFound(_id);
         }

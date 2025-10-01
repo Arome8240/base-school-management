@@ -19,7 +19,7 @@ contract SchoolFactory {
         owner = msg.sender;
     }
 
-    function createSchool(
+    function registerSchool(
         address _id,
         string memory _name,
         string memory _poBox,
